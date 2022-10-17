@@ -6,6 +6,10 @@ FROM mcr.microsoft.com/vscode/devcontainers/base:0-${VARIANT}
 
 # [Optional] Uncomment this section to install additional OS packages.
 # RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-#     && apt-get -y install --no-install-recommends <your-package-list-here>
-
-
+#    && apt-get -y install --no-install-recommends make gcc g++ openjdk-17-jdk \
+#    && curl "https://nodejs.org/dist/v16.18.0/node-v16.18.0.tar.gz" -O \
+#    && tar xvzf node-v16.18.0.tar.gz \
+#    && cd node-v16.18.0 \
+#    && ./configure \
+#    && make \
+#    && sudo make install

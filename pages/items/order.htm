@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.00" />
+    <meta name="author" content="Lukas Batema" />
+
+    <link href="../../css/theme.css" type="text/css" rel="stylesheet" />
+
+    <title>Flex Properties</title>
+  </head>
+
+  <body>
+    <nav>
+      <ul>
+        <li><a href="/index.htm">Home</a></li>
+
+        <li class="dropdown">
+          <a href="javascript:void(0);">Flex Container</a>
+
+          <ul class="dropdown-content">
+            <li><a href="../containers/flex-direction.htm">flex-direction: row | row-reverse | column | column-reverse</a></li>
+            <li><a href="../containers/align-items.htm">align-items: normal | stretch | &lt;baseline-position&gt; | &lbrack; &lt;overflow-position&gt; &lt;self-position&gt; &rbrack;</a></li>
+            <li><a href="../containers/flex-flow.htm">flex-flow: &lt;'flex-direction'&gt; || &lt;'flex-wrap'&gt;</a></li>
+          </ul>
+        </li>
+
+        <li id="active" class="dropdown">
+          <a href="javascript:void(0);">Flex Items</a>
+
+          <ul class="dropdown-content">
+            <li id="active"><a href="javascript:void(0);">order: integer</a></li>
+            <li><a href="flex-grow.htm">flex-grow: number</a></li>
+            <li><a href="flex-shrink.htm">flex-shrink: number</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <main>
+      <div id="round-corner-box">
+        <h1>Order</h1>
+        <p style="order: 2;">0</p>
+        <p style="order: 4;">3</p>
+        <p style="order: 3;">6</p>
+        <p style="order: 1;">9</p>
+
+        <p>These are ordered semi-randomly, but count by 3s if in normal order.</p>
+      </div>
+    </main>
+  </body>
+</html>
