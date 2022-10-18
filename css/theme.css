@@ -1,0 +1,337 @@
+body {
+  position: relative;
+  transform: translate(0, 0);
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: monospace;
+  background-color: #989EA5;
+}
+
+nav ul {
+  position: absolute;
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #82888F;
+}
+
+nav ul li {
+  display: block;
+  float: left;
+  list-style-type: none;
+  margin: 0;
+  padding: 1.56em;
+  width: fit-content;
+  text-align: center;
+  font-size: 12px;
+  border-right: 4px solid #636669;
+}
+
+nav ul li.dropdown ul.dropdown-content {
+  visibility: hidden;
+}
+
+
+nav ul li.dropdown:hover ul.dropdown-content {
+  display: block;
+  visibility: visible;
+  margin-top: 1.56em;
+  width: fit-content;
+  background-color: #82888F;
+}
+
+
+nav ul li.dropdown:hover ul.dropdown-content li {
+  display: inline-block;
+  overflow: hidden;
+  width: calc(100% - 3.15em);
+  text-align: center;
+  border: none;
+}
+
+nav ul li:hover, nav ul li.dropdown ul.dropdown-content li:not(.active):hover {
+  transition: ease 420ms;
+  background-color: #424546;
+}
+
+nav ul li.active, nav ul li.dropdown.active {
+  background-color: #595b5b;
+}
+
+nav ul li:last-child {
+  border: none;
+}
+
+nav ul li a, nav ul li.dropdown ul.dropdown-content li a, nav ul li.dropdown a {
+  text-decoration: none;
+  color: #c3cace;
+}
+
+body main {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  z-index: -1;
+}
+
+body main div#round-corner-box {
+  margin: 6.24% 3.12% 0 3.12%;
+  padding: 2%;
+  min-width: 320px;
+  width: 100%;
+  max-width: 4096px;
+  text-align: center;
+  border-radius: 33px;
+  background-color: #8D9197;
+}
+
+body main div#round-corner-box div.flex div#direction-row {
+  display: inline-flex;
+  flex-direction: row;
+}
+
+body main div#round-corner-box div.flex div#direction-row-reverse {
+  display: inline-flex;
+  flex-direction: row-reverse;
+}
+
+body main div#round-corner-box div.flex div#direction-column {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+body main div#round-corner-box div.flex div#direction-column-reverse {
+  display: inline-flex;
+  flex-direction: column-reverse;
+}
+
+body main div#round-corner-box div.flex div#align-items-baseline {
+  display: inline-flex;
+  align-items: baseline;
+}
+
+body main div#round-corner-box div.flex div#align-items-flex-end {
+  display: inline-flex;
+  align-items: flex-end;
+}
+
+body main div#round-corner-box div.flex div#align-items-flex-start {
+  display: inline-flex;
+  align-items: flex-start;
+}
+
+body main div#round-corner-box div.flex div#align-items-flex-stretch {
+  display: inline-flex;
+  align-items: stretch;
+}
+
+body main div#round-corner-box div.flex div#order {
+  display: inline-flex;
+  flex-flow: row wrap;
+}
+
+body main div#round-corner-box div.flex div#flow-column-wrap {
+  display: inline-flex;
+  flex-flow: column wrap;
+}
+
+body main div#round-corner-box div.flex div#flow-column-wrap-reverse {
+  display: inline-flex;
+  flex-flow: column wrap-reverse;
+}
+
+body main div#round-corner-box div.flex div#flow-column-nowrap {
+  display: inline-flex;
+  flex-flow: column nowrap;
+}
+
+body main div#round-corner-box div.flex div#flow-row-wrap {
+  display: inline-flex;
+  flex-flow: row wrap;
+}
+
+body main div#round-corner-box div.flex div#flow-row-wrap-reverse {
+  display: inline-flex;
+  flex-flow: row wrap-reverse;
+}
+
+body main div#round-corner-box div.flex div#flow-row-nowrap {
+  display: inline-flex;
+  flex-flow: row nowrap;
+}
+
+body main div#round-corner-box div.flex div#flow-column-wrap {
+  display: inline-flex;
+  flex-flow: column wrap;
+}
+
+body main div#round-corner-box div.flex div#flow-column-reverse-wrap {
+  display: inline-flex;
+  flex-flow: column-reverse wrap;
+}
+
+body main div#round-corner-box div.flex div#flow-column-reverse-wrap-reverse {
+  display: inline-flex;
+  flex-flow: column-reverse wrap-reverse;
+}
+
+body main div#round-corner-box div.flex div#flow-column-reverse-nowrap {
+  display: inline-flex;
+  flex-flow: column-reverse nowrap;
+}
+
+body main div#round-corner-box div.flex div#flow-row-reverse-wrap {
+  display: inline-flex;
+  flex-flow: row-reverse wrap;
+}
+
+body main div#round-corner-box div.flex div#flow-row-reverse-wrap-reverse {
+  display: inline-flex;
+  flex-flow: row-reverse wrap-reverse;
+}
+
+body main div#round-corner-box div.flex div#flow-row-reverse-nowrap {
+  display: inline-flex;
+  flex-flow: row-reverse nowrap;
+}
+
+body main div#round-corner-box div.flex div#flow-column-wrap,
+body main div#round-corner-box div.flex div#flow-column-wrap-reverse,
+body main div#round-corner-box div.flex div#flow-column-reverse-wrap,
+body main div#round-corner-box div.flex div#flow-column-reverse-wrap-reverse {
+  max-height: 100em;
+}
+
+body main div#round-corner-box div.flex div#grow,
+body main div#round-corner-box div.flex div#shrink {
+  display: flex;
+  align-items: stretch;
+}
+
+body main div#round-corner-box div.flex div p {
+  line-height: 200%;
+  margin: 2em;
+  padding: 2em;
+  width: 2em;
+  text-align: center;
+  border-radius: 33px;
+  color: #FFFFFF;
+  background-color: #70757b;
+}
+
+body main div#round-corner-box div.flex div#shrink p {
+  line-height: 200%;
+  margin: 2.5%;
+  padding: 1.5%;
+  width: 1.5%;
+  text-align: center;
+  border-radius: 33px;
+  background-color: #70757b;
+}
+
+body main div#round-corner-box div.flex div#align-items-baseline p.min-height-two,
+body main div#round-corner-box div.flex div#align-items-flex-end p.min-height-two,
+body main div#round-corner-box div.flex div#align-items-flex-start p.min-height-two,
+body main div#round-corner-box div.flex div#align-items-stretch p.min-height-two {
+  min-height: 2em;
+}
+
+body main div#round-corner-box div.flex div#align-items-baseline p.min-height-four,
+body main div#round-corner-box div.flex div#align-items-flex-end p.min-height-four,
+body main div#round-corner-box div.flex div#align-items-flex-start p.min-height-four,
+body main div#round-corner-box div.flex div#align-items-stretch p.min-height-four {
+  min-height: 4em;
+}
+
+body main div#round-corner-box div.flex div#align-items-baseline p.min-height-eight,
+body main div#round-corner-box div.flex div#align-items-flex-end p.min-height-eight,
+body main div#round-corner-box div.flex div#align-items-flex-start p.min-height-eight,
+body main div#round-corner-box div.flex div#align-items-stretch p.min-height-eight {
+  min-height: 8em;
+}
+
+body main div#round-corner-box div.flex div#align-items-baseline p.min-height-sixteen,
+body main div#round-corner-box div.flex div#align-items-flex-end p.min-height-sixteen,
+body main div#round-corner-box div.flex div#align-items-flex-start p.min-height-sixteen,
+body main div#round-corner-box div.flex div#align-items-stretch p.min-height-sixteen {
+  min-height: 16em;
+}
+
+body main div#round-corner-box div.flex div#align-items-baseline p.min-height-thirty-two,
+body main div#round-corner-box div.flex div#align-items-flex-end p.min-height-thirty-two,
+body main div#round-corner-box div.flex div#align-items-flex-start p.min-height-thirty-two,
+body main div#round-corner-box div.flex div#align-items-stretch p.min-height-thirty-two {
+  min-height: 32em;
+}
+
+body main div#round-corner-box div.flex div#align-items-baseline p.min-height-sixty-four,
+body main div#round-corner-box div.flex div#align-items-flex-end p.min-height-sixty-four,
+body main div#round-corner-box div.flex div#align-items-flex-start p.min-height-sixty-four,
+body main div#round-corner-box div.flex div#align-items-stretch p.min-height-sixty-four {
+  min-height: 64em;
+}
+
+body main div#round-corner-box div.flex div#order p#first-item {
+  order: 2;
+}
+
+body main div#round-corner-box div.flex div#order p#second-item {
+  order: 4;
+}
+
+body main div#round-corner-box div.flex div#order p#third-item {
+  order: 6;
+}
+
+body main div#round-corner-box div.flex div#order p#fourth-item {
+  order: 8;
+}
+
+body main div#round-corner-box div.flex div#order p#fifth-item {
+  order: 10;
+}
+
+body main div#round-corner-box div.flex div#order p#sixth-item {
+  order: 12;
+}
+
+body main div#round-corner-box div.flex div#order p#seventh-item {
+  order: 1;
+}
+
+body main div#round-corner-box div.flex div#order p#eighth-item {
+  order: 3;
+}
+
+body main div#round-corner-box div.flex div#order p#ninth-item {
+  order: 6;
+}
+
+body main div#round-corner-box div.flex div#order p#tenth-item {
+  order: 9;
+}
+
+body main div#round-corner-box div.flex div#order p#eleventh-item {
+  order: 11;
+}
+
+body main div#round-corner-box div.flex div#grow p#grown-item {
+  flex-grow: 2;
+}
+
+body main div#round-corner-box div.flex div#shrink p#shrank-item {
+  flex-shrink: 0;
+}
+
+body main div#round-corner-box div.flex div#grow p#grown-item {
+  flex-grow: 1;
+}
+
+body main div#round-corner-box div.flex div#shrank p#shrank-item {
+  flex-shrink: 0;
+}
