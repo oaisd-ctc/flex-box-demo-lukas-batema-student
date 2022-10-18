@@ -1,6 +1,6 @@
 body {
   position: relative;
-  transform: translate(0, 0, 0);
+  transform: translate(0, 0);
   overflow-x: hidden;
   margin: 0;
   padding: 0;
@@ -53,12 +53,12 @@ nav ul li.dropdown:hover ul.dropdown-content li {
   border: none;
 }
 
-nav ul li:hover, nav ul li.dropdown ul.dropdown-content li:hover {
+nav ul li:hover, nav ul li.dropdown ul.dropdown-content li:not(.active):hover {
   transition: ease 420ms;
   background-color: #424546;
 }
 
-nav ul li#active, nav ul li.dropdown#active {
+nav ul li.active, nav ul li.dropdown.active {
   background-color: #595b5b;
 }
 
@@ -80,12 +80,11 @@ body main {
 }
 
 body main div#round-corner-box {
-  margin: 7.24em 3.12em 0 3.12em;
-  padding: 2em;
+  margin: 6.24% 3.12% 0 3.12%;
+  padding: 2%;
   min-width: 320px;
   width: 100%;
   max-width: 4096px;
-  contain:content;
   text-align: center;
   border-radius: 33px;
   background-color: #8D9197;
@@ -134,12 +133,6 @@ body main div#round-corner-box div.flex div#align-items-flex-stretch {
 body main div#round-corner-box div.flex div#order {
   display: inline-flex;
   flex-flow: row wrap;
-}
-
-body main div#round-corner-box div.flex div#grow,
-body main div#round-corner-box div.flex div#shrink {
-  display: flex;
-  align-items: stretch;
 }
 
 body main div#round-corner-box div.flex div#flow-column-wrap {
@@ -208,10 +201,16 @@ body main div#round-corner-box div.flex div#flow-row-reverse-nowrap {
 }
 
 body main div#round-corner-box div.flex div#flow-column-wrap,
-body main div#round-corner-box div.flex div#flow-column-wrap-reverse, 
+body main div#round-corner-box div.flex div#flow-column-wrap-reverse,
 body main div#round-corner-box div.flex div#flow-column-reverse-wrap,
 body main div#round-corner-box div.flex div#flow-column-reverse-wrap-reverse {
   max-height: 100em;
+}
+
+body main div#round-corner-box div.flex div#grow,
+body main div#round-corner-box div.flex div#shrink {
+  display: flex;
+  align-items: stretch;
 }
 
 body main div#round-corner-box div.flex div p {
@@ -221,14 +220,15 @@ body main div#round-corner-box div.flex div p {
   width: 2em;
   text-align: center;
   border-radius: 33px;
+  color: #FFFFFF;
   background-color: #70757b;
 }
 
 body main div#round-corner-box div.flex div#shrink p {
   line-height: 200%;
-  margin:1.55em;
-  padding: 1.55em;
-  width: 1.55em;
+  margin: 2.5%;
+  padding: 1.5%;
+  width: 1.5%;
   text-align: center;
   border-radius: 33px;
   background-color: #70757b;
@@ -333,5 +333,5 @@ body main div#round-corner-box div.flex div#grow p#grown-item {
 }
 
 body main div#round-corner-box div.flex div#shrank p#shrank-item {
-  flex-shrink: 1;
+  flex-shrink: 0;
 }
