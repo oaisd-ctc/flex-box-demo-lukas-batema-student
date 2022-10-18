@@ -45,8 +45,39 @@ body main div#round-corner-box div#direction p#down {
 
 body main div#round-corner-box div#alignment {
   display: flex;
-  height: 69px;
+  height: 25px;
   align-items: center;
+}
+
+body main div#round-corner-box div#order-container p, body main div#round-corner-box div#grow-container p {
+  padding: 2em;
+  height: 2em;
+  width: 2em;
+  margin: 2em;
+  border-radius: 33px;
+  background-color: #595b5b;
+}
+
+body main div#round-corner-box div#grow-container, body main div#round-corner-box div#shrink-container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+body main div#round-corner-box div#shrink-container p {
+  width: 5em;
+  height: 5em;
+  padding: 2.5em;
+  margin: 2.5em;
+  border-radius: 33px;
+  background-color: #595b5b;
+}
+
+body main div#round-corner-box div#grow-container p#grow-normal {
+  flex-grow: 0;
+}
+
+body main div#round-corner-box div#grow-container p#grow-ten {
+  flex-grow: 10;
 }
 
 body main div#round-corner-box div#alignment p {
