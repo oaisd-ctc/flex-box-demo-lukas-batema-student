@@ -1,99 +1,20 @@
 body {
   position: relative;
-  margin: 0;
-  padding: 0;
   transform: translate(0, 0, 0);
   overflow: hidden;
+  margin: 0;
+  padding: 0;
   width: 100%;
   height: 100%;
   font-family: monospace;
   background-color: #989EA5;
 }
 
-body main {
-  position: relative;
-  display: flex;
-  width: 100%;
-  height: 100%;
-  transform: translateY(calc(3.14em + 12px));
-  overflow: hidden;
-  z-index: -1;
-}
-
-body main div#round-corner-box {
-  position: relative;
-  display: flex;
-  width: calc(100% + 113.62em);
-  height: calc(100% + 59.62em);
-  padding: 2em;
-  background-color: #8D9197;
-  border-radius: 33px;
-  margin: 3.12em;
-  flex-flow: column wrap;
-  text-align: center;
-}
-
-body main div#round-corner-box div#direction p#up {
-  display: flex;
-  flex-direction: row;
-}
-
-body main div#round-corner-box div#direction p#down {
-  display: flex;
-  flex-direction: row-reverse;
-}
-
-body main div#round-corner-box div#alignment {
-  display: flex;
-  height: 25px;
-  align-items: center;
-}
-
-body main div#round-corner-box div#order-container p, body main div#round-corner-box div#grow-container p {
-  padding: 2em;
-  height: 2em;
-  width: 2em;
-  margin: 2em;
-  border-radius: 33px;
-  background-color: #595b5b;
-}
-
-body main div#round-corner-box div#grow-container, body main div#round-corner-box div#shrink-container {
-  display: flex;
-  flex-flow: row wrap;
-}
-
-body main div#round-corner-box div#shrink-container p {
-  width: 5em;
-  height: 5em;
-  padding: 2.5em;
-  margin: 2.5em;
-  border-radius: 33px;
-  background-color: #595b5b;
-}
-
-body main div#round-corner-box div#grow-container p#grow-normal {
-  flex-grow: 0;
-}
-
-body main div#round-corner-box div#grow-container p#grow-ten {
-  flex-grow: 10;
-}
-
-body main div#round-corner-box div#alignment p {
-  padding: 2em;
-  height: 2em;
-  width: 2em;
-  margin: 2em;
-  border-radius: 33px;
-  background-color: #595b5b;
-}
-
 nav ul {
   position: absolute;
   display: block;
-  padding: 0;
   margin: 0;
+  padding: 0;
   width: 100%;
   background-color: #82888F;
 }
@@ -101,13 +22,13 @@ nav ul {
 nav ul li {
   display: block;
   float: left;
-  padding: 1.56em;
-  margin: 0;
-  width: fit-content;
   list-style-type: none;
-  border-right: 4px solid #636669;
+  margin: 0;
+  padding: 1.56em;
+  width: fit-content;
   text-align: center;
   font-size: 12px;
+  border-right: 4px solid #636669;
 }
 
 nav ul li.dropdown ul.dropdown-content {
@@ -117,9 +38,9 @@ nav ul li.dropdown ul.dropdown-content {
 
 nav ul li.dropdown:hover ul.dropdown-content {
   display: block;
+  visibility: visible;
   margin-top: 1.56em;
   width: fit-content;
-  visibility: visible;
   background-color: #82888F;
 }
 
@@ -128,13 +49,13 @@ nav ul li.dropdown:hover ul.dropdown-content li {
   display: inline-block;
   overflow: hidden;
   width: calc(100% - 3.15em);
-  border: none;
   text-align: center;
+  border: none;
 }
 
 nav ul li:hover, nav ul li.dropdown ul.dropdown-content li:hover {
-  background-color: #424546;
   transition: ease 420ms;
+  background-color: #424546;
 }
 
 nav ul li#active, nav ul li.dropdown#active {
@@ -148,4 +69,91 @@ nav ul li:last-child {
 nav ul li a, nav ul li.dropdown ul.dropdown-content li a, nav ul li.dropdown a {
   text-decoration: none;
   color: #c3cace;
+}
+
+body main {
+  position: relative;
+  display: flex;
+  width: 100%;
+  z-index: -1;
+}
+
+body main div#round-corner-box {
+  margin: 7.24em 3.12em 0 3.12em;
+  padding: 2em;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  border-radius: 33px;
+  background-color: #8D9197;
+}
+
+body main div#round-corner-box div#direction {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+body main div#round-corner-box div#align {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+body main div#round-corner-box div#flow, 
+body main div#round-corner-box div#order, body main div#round-corner-box div#grow, body main div#round-corner-box div#shrink {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+body main div#round-corner-box div#direction p, body main div#round-corner-box div#align p, body main div#round-corner-box div#flow p,
+body main div#round-corner-box div#order p, body main div#round-corner-box div#grow p, body main div#round-corner-box div#shrink p {
+  line-height: 200%;
+  margin: 2em;
+  padding: 2em;
+  height: 2em;
+  width: 2em;
+  text-align: center;
+  border-radius: 33px;
+  background-color: #70757b;
+}
+
+body main div#round-corner-box div#direction p#first-item {
+  margin-right: 20em;
+}
+
+body main div#round-corner-box div#align > p#first-item {
+  margin-left: 4em;
+}
+
+body main div#round-corner-box div#flow p#first-item {
+  margin-left: 20em;
+}
+
+body main div#round-corner-box div#order p#first-item {
+  order: 2;
+}
+
+body main div#round-corner-box div#order p#second-item {
+  order: 4;
+}
+
+body main div#round-corner-box div#order p#third-item {
+  margin-left: 30em;
+  order: 1;
+}
+
+body main div#round-corner-box div#order p#fourth-item {
+  order: 3;
+}
+
+body main div#round-corner-box div#grow p#grown-item {
+  flex-grow: 2;
+}
+
+body main div#round-corner-box div#shrink p#first-item {
+  margin-left: 20em;
+}
+
+body main div#round-corner-box div#shrink p#shrank-item {
+  flex-shrink: 0;
 }
